@@ -1,0 +1,9 @@
+weather() {
+    city="$1"
+
+    if [ -z "$city" ]; then
+        city="Trollhattan"
+    fi
+
+    eval "curl http://wttr.in/${city}"
+}

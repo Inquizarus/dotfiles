@@ -1,0 +1,19 @@
+# Add local bin folder if present
+if [ -d "$HOME/.local/bin" ] ; then
+    export PATH="$HOME/.local/bin:$PATH"
+fi
+
+# Add other local bind folder if present
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# Add global go bin if present
+if [ -d "/usr/local/go/bin" ] ; then
+    export  PATH="$PATH:/usr/local/go/bin"
+fi
+
+# Add local go bin if present
+if [ -d "$HOME/go/bin" ] ; then
+    export  PATH="$PATH:$HOME/go/bin"
+fi
